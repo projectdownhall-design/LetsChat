@@ -1,7 +1,7 @@
 {
   "name": "letschat",
   "version": "1.0.0",
-  "description": "LetsChat - A WhatsApp-like Desktop Messenger",
+  "description": "LetsChat - A secure standalone desktop messenger",
   "main": "dist/electron/main.js",
   "author": "LetsChat Team",
   "license": "MIT",

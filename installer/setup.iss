@@ -1,5 +1,5 @@
 ; LetsChat Installer - Inno Setup 6 Script
-; Modernes Design mit WhatsApp-Farbschema
+; Modernes Design im dunklen Grün-Farbschema
 
 #define AppName "LetsChat"
 #define AppVersion "1.0.0"
@@ -89,7 +89,7 @@ const
   CLR_ACCENT      = $2A3942;   { Eingabefelder / Bevel            }
   CLR_TEXT_MAIN   = $FFFFFF;   { Primärtext  – reines Weiß        }
   CLR_TEXT_MUTED  = $B0BEC5;   { Gedämpfter Text – heller         }
-  CLR_GREEN       = $84A800;   { WhatsApp-Grün  #00A884 (BGR)     }
+  CLR_GREEN       = $84A800;   { Akzent-Grün    #00A884 (BGR)     }
   CLR_WHITE       = $FFFFFF;
 
 { ── Wizard-Erscheinungsbild anpassen ── }
