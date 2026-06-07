@@ -6,6 +6,22 @@
 
 Ein WhatsApp-ähnlicher Desktop-Messenger für Windows, gebaut mit Electron, React und Node.js.
 
+## Download
+
+[![Latest Release](https://img.shields.io/github/v/release/projectdownhall-design/LetsChat?label=Download&logo=github)](https://github.com/projectdownhall-design/LetsChat/releases/latest)
+
+Fertige Windows-Builds findest du auf der **[Releases-Seite](https://github.com/projectdownhall-design/LetsChat/releases/latest)**.
+
+| Variante | Beschreibung | Download |
+|----------|--------------|----------|
+| **Installer (Inno Setup)** | Empfohlen – mit Startmenü-/Desktop-Verknüpfung und AGB | [LetsChat-Setup-v1.0.0.exe](https://github.com/projectdownhall-design/LetsChat/releases/download/v1.0.0/LetsChat-Setup-v1.0.0.exe) |
+| **Installer (NSIS)** | Alternativer Installer mit Auto-Update-Unterstützung | [LetsChat.Setup.1.0.0.exe](https://github.com/projectdownhall-design/LetsChat/releases/download/v1.0.0/LetsChat.Setup.1.0.0.exe) |
+| **Portable** | Ohne Installation – direkt ausführbar | [LetsChat.1.0.0.exe](https://github.com/projectdownhall-design/LetsChat/releases/download/v1.0.0/LetsChat.1.0.0.exe) |
+
+> **Voraussetzung:** Windows 10/11 (64-bit). Die Builds sind aktuell nicht signiert – beim ersten Start ggf. über „Weitere Informationen → Trotzdem ausführen" bestätigen.
+
+Du möchtest aus dem Quellcode bauen? Dann folge dem Schnellstart unten.
+
 ## Schnellstart (3 Schritte)
 
 ### 1. Voraussetzungen
