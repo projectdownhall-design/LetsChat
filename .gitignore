@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build / packaging output
+dist/
+dist-electron/
+dist-installer/
+build/
+
+# Runtime data
+data/
+uploads/
+*.db
+*.sqlite
+
+# Secrets & local env (keep .env.example tracked)
+.env
+.env.local
+.env.*.local
+
+# Stray local PostgreSQL artifacts
+UsersAlecletschat-pgdata/
+UsersAlecpgpass_init.txt
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

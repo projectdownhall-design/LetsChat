@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LetsChat – Sicher. Schnell. Einfach.</title>
+  <meta name="description" content="LetsChat ist der moderne Messenger für Windows mit Ende-zu-Ende-Verschlüsselung, Echtzeit-Chat und mehr. Jetzt kostenlos herunterladen." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ───── NAV ───── -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <div class="nav__logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="10" fill="url(#grad1)"/>
+            <path d="M20 8C13.373 8 8 13.149 8 19.5C8 22.07 8.9 24.44 10.41 26.34L8.5 32L14.36 30.12C16.12 31.01 18.01 31.5 20 31.5C26.627 31.5 32 26.351 32 20C32 13.649 26.627 8 20 8Z" fill="white"/>
+            <circle cx="15" cy="20" r="1.8" fill="url(#grad1)"/>
+            <circle cx="20" cy="20" r="1.8" fill="url(#grad1)"/>
+            <circle cx="25" cy="20" r="1.8" fill="url(#grad1)"/>
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#25D366"/>
+                <stop offset="1" stop-color="#128C7E"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>LetsChat</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#preview">Vorschau</a></li>
+        <li><a href="#platforms">Plattformen</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#download" class="btn btn--nav">Jetzt herunterladen</a>
+      <button class="nav__burger" id="burger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#features" class="nav__mobile-link">Features</a>
+      <a href="#preview" class="nav__mobile-link">Vorschau</a>
+      <a href="#platforms" class="nav__mobile-link">Plattformen</a>
+      <a href="#faq" class="nav__mobile-link">FAQ</a>
+      <a href="#download" class="btn btn--primary" style="margin-top:1rem;display:block;text-align:center;">Herunterladen</a>
+    </div>
+  </nav>
+
+  <!-- ───── HERO ───── -->
+  <section class="hero">
+    <div class="hero__bg-blobs">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="blob blob--3"></div>
+    </div>
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <div class="hero__badge">
+          <span class="badge__dot"></span>
+          Kostenlos &amp; Open Source
+        </div>
+        <h1 class="hero__title">
+          Dein Messenger.<br />
+          <span class="gradient-text">Privat. Schnell. Sicher.</span>
+        </h1>
+        <p class="hero__sub">
+          LetsChat ist der moderne Desktop-Messenger für Windows mit echter Ende-zu-Ende-Verschlüsselung,
+          Echtzeit-Nachrichten, Medienversand und viel mehr – ganz ohne Werbung und Datenweitergabe.
+        </p>
+        <div class="hero__actions">
+          <a href="#download" class="btn btn--primary btn--large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 16L7 11h3V4h4v7h3L12 16Z" fill="currentColor"/><path d="M5 18h14v2H5v-2Z" fill="currentColor"/></svg>
+            Für Windows herunterladen
+          </a>
+          <a href="#preview" class="btn btn--ghost btn--large">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><polygon points="10,8 16,12 10,16" fill="currentColor"/></svg>
+            Demo ansehen
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num">100%</span>
+            <span class="stat__label">Verschlüsselt</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num">0€</span>
+            <span class="stat__label">Kostenlos</span>
+          </div>
+          <div class="stat__divider"></div>
+          <div class="stat">
+            <span class="stat__num">&lt;1s</span>
+            <span class="stat__label">Echtzeit</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__mockup">
+        <div class="mockup-window">
+          <div class="mockup-window__bar">
+            <div class="mockup-dot red"></div>
+            <div class="mockup-dot yellow"></div>
+            <div class="mockup-dot green"></div>
+            <span class="mockup-window__title">LetsChat</span>
+          </div>
+          <div class="mockup-window__body">
+            <div class="mockup-sidebar">
+              <div class="mockup-search">
+                <div class="mockup-search__icon">🔍</div>
+                <div class="mockup-search__bar"></div>
+              </div>
+              <div class="mockup-chat-item mockup-chat-item--active">
+                <div class="mockup-avatar" style="background:#25D366;">A</div>
+                <div class="mockup-chat-info">
+                  <span class="mockup-name">Anna</span>
+                  <span class="mockup-preview">Hey, wie geht's? 😊</span>
+                </div>
+                <span class="mockup-time">14:22</span>
+              </div>
+              <div class="mockup-chat-item">
+                <div class="mockup-avatar" style="background:#128C7E;">M</div>
+                <div class="mockup-chat-info">
+                  <span class="mockup-name">Max</span>
+                  <span class="mockup-preview">Schick mal das Dokument</span>
+                </div>
+                <span class="mockup-time">13:05</span>
+              </div>
+              <div class="mockup-chat-item">
+                <div class="mockup-avatar" style="background:#075E54;">L</div>
+                <div class="mockup-chat-info">
+                  <span class="mockup-name">Lisa</span>
+                  <span class="mockup-preview">👍 Perfekt, bis dann!</span>
+                </div>
+                <span class="mockup-time">09:41</span>
+              </div>
+            </div>
+            <div class="mockup-main">
+              <div class="mockup-main__header">
+                <div class="mockup-avatar" style="background:#25D366;width:32px;height:32px;font-size:14px;">A</div>
+                <div>
+                  <div class="mockup-name" style="font-size:13px;">Anna</div>
+                  <div style="font-size:10px;color:#25D366;">Online</div>
+                </div>
+              </div>
+              <div class="mockup-messages">
+                <div class="mockup-msg mockup-msg--in">Hey! 👋 Wie war dein Tag?</div>
+                <div class="mockup-msg mockup-msg--out">Super, danke! Und bei dir? 😊</div>
+                <div class="mockup-msg mockup-msg--in">Auch gut! Hast du LetsChat schon installiert?</div>
+                <div class="mockup-msg mockup-msg--out">Ja! Läuft super schnell 🚀</div>
+                <div class="mockup-msg mockup-msg--in typing-indicator"><span></span><span></span><span></span></div>
+              </div>
+              <div class="mockup-input">
+                <div class="mockup-input__emoji">😊</div>
+                <div class="mockup-input__field"></div>
+                <div class="mockup-input__send">➤</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mockup-glow"></div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Mehr entdecken</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ───── FEATURES ───── -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__tag">Features</div>
+        <h2 class="section__title">Alles, was ein moderner Messenger braucht</h2>
+        <p class="section__sub">LetsChat wurde von Grund auf für Datenschutz, Geschwindigkeit und eine hervorragende Nutzererfahrung entwickelt.</p>
+      </div>
+      <div class="features__grid">
+
+        <div class="feature-card feature-card--big">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#25D366,#128C7E);">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="white" stroke-width="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Ende-zu-Ende-Verschlüsselung</h3>
+          <p>Alle Nachrichten werden mit AES-GCM verschlüsselt. Nur du und dein Gesprächspartner können mitlesen – niemand sonst, nicht einmal wir.</p>
+          <div class="feature-card__tag">AES-GCM</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#667eea,#764ba2);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8Z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Echtzeit-Nachrichten</h3>
+          <p>Socket.io-basierte Echtzeit-Übertragung sorgt dafür, dass Nachrichten in unter einer Sekunde ankommen.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#f093fb,#f5576c);">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="white" stroke-width="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="white"/><path d="M21 15l-5-5L5 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Medienversand</h3>
+          <p>Bilder, Videos und Dateien einfach per Drag &amp; Drop senden. Mit integriertem Medien-Viewer direkt in der App.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <h3>Kontaktverwaltung</h3>
+          <p>Kontakte einfach hinzufügen, suchen und verwalten. Sehe auf einen Blick, wer online ist.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8Z" stroke="white" stroke-width="2"/><path d="M6 1v3M10 1v3M14 1v3" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Emoji & Reaktionen</h3>
+          <p>Vollständiger Emoji-Picker mit Kategorien. Ausdrucksstarke Kommunikation ohne Grenzen.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#fa709a,#fee140);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Nachrichtenstatus</h3>
+          <p>Einfach, Doppel- und blaue Haken zeigen, ob Nachrichten gesendet, zugestellt oder gelesen wurden.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb);">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="white" stroke-width="2"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>System-Tray Integration</h3>
+          <p>LetsChat läuft diskret im System-Tray und benachrichtigt dich bei neuen Nachrichten – ohne zu stören.</p>
+        </div>
+
+        <div class="feature-card feature-card--big feature-card--right">
+          <div class="feature-card__icon" style="background:linear-gradient(135deg,#ffecd2,#fcb69f);">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" stroke="#c05a2e" stroke-width="2"/></svg>
+          </div>
+          <h3>Sicher & Privat</h3>
+          <p>Keine Werbung, keine Datenweitergabe. Deine Nachrichten bleiben auf deinem Gerät – mit JWT-Authentifizierung und verschlüsselter Datenbank.</p>
+          <div class="feature-card__tag">JWT Auth</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── APP PREVIEW ───── -->
+  <section class="section preview" id="preview">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__tag">Vorschau</div>
+        <h2 class="section__title">Schön designed. Intuitiv bedienbar.</h2>
+        <p class="section__sub">Ein Interface, das aus dem Alltag bekannt ist – aber mit mehr Privatsphäre und weniger Ablenkung.</p>
+      </div>
+      <div class="preview__tabs">
+        <button class="preview__tab preview__tab--active" data-tab="chat">💬 Chat</button>
+        <button class="preview__tab" data-tab="media">🖼️ Medien</button>
+        <button class="preview__tab" data-tab="settings">⚙️ Einstellungen</button>
+      </div>
+      <div class="preview__content">
+        <div class="preview__panel preview__panel--active" id="tab-chat">
+          <div class="big-mockup">
+            <div class="big-mockup__bar">
+              <div class="mockup-dot red"></div>
+              <div class="mockup-dot yellow"></div>
+              <div class="mockup-dot green"></div>
+              <span style="margin-left:12px;font-size:13px;color:#aaa;">LetsChat – Chat</span>
+            </div>
+            <div class="big-mockup__body">
+              <div class="big-sidebar">
+                <div class="big-sidebar__header">
+                  <div class="big-avatar" style="background:linear-gradient(135deg,#25D366,#128C7E);">Du</div>
+                  <div class="big-sidebar__title">Chats</div>
+                  <div class="big-sidebar__icon">✏️</div>
+                </div>
+                <div class="big-search"><span>🔍</span> Suchen…</div>
+                <div class="big-chat-item big-chat-item--active">
+                  <div class="big-avatar" style="background:#9b59b6;">A</div>
+                  <div class="big-ci">
+                    <div class="big-ci-top"><b>Anna Müller</b><span class="big-time">14:22</span></div>
+                    <div class="big-ci-bot">Hey, wie geht's? 😊 <span class="big-badge">2</span></div>
+                  </div>
+                </div>
+                <div class="big-chat-item">
+                  <div class="big-avatar" style="background:#e67e22;">M</div>
+                  <div class="big-ci">
+                    <div class="big-ci-top"><b>Max Berger</b><span class="big-time">13:05</span></div>
+                    <div class="big-ci-bot">Schick das Dokument bitte</div>
+                  </div>
+                </div>
+                <div class="big-chat-item">
+                  <div class="big-avatar" style="background:#2980b9;">L</div>
+                  <div class="big-ci">
+                    <div class="big-ci-top"><b>Lisa Schmidt</b><span class="big-time">09:41</span></div>
+                    <div class="big-ci-bot">✓✓ Bis dann! 👋</div>
+                  </div>
+                </div>
+              </div>
+              <div class="big-chat">
+                <div class="big-chat__header">
+                  <div class="big-avatar" style="background:#9b59b6;width:36px;height:36px;font-size:15px;">A</div>
+                  <div>
+                    <div style="font-weight:600;font-size:14px;">Anna Müller</div>
+                    <div style="font-size:11px;color:#25D366;">● Online</div>
+                  </div>
+                  <div style="margin-left:auto;display:flex;gap:12px;color:#aaa;font-size:18px;cursor:pointer;">🔍 📞 ⋮</div>
+                </div>
+                <div class="big-chat__messages">
+                  <div class="big-date-divider">Heute</div>
+                  <div class="big-msg big-msg--in">
+                    <div class="big-msg__bubble">Hey! Wie war dein Wochenende? 😊</div>
+                    <div class="big-msg__meta">14:18</div>
+                  </div>
+                  <div class="big-msg big-msg--out">
+                    <div class="big-msg__bubble">War super! Wir waren wandern 🏔️</div>
+                    <div class="big-msg__meta">14:19 ✓✓</div>
+                  </div>
+                  <div class="big-msg big-msg--in">
+                    <div class="big-msg__bubble">Oh cool! Hast du Fotos? 📸</div>
+                    <div class="big-msg__meta">14:20</div>
+                  </div>
+                  <div class="big-msg big-msg--out">
+                    <div class="big-msg__bubble">Ja! Schick ich gleich 😄</div>
+                    <div class="big-msg__meta">14:21 ✓✓</div>
+                  </div>
+                  <div class="big-msg big-msg--in">
+                    <div class="big-msg__bubble">Hey, wie geht's? 😊</div>
+                    <div class="big-msg__meta">14:22</div>
+                  </div>
+                </div>
+                <div class="big-chat__input">
+                  <span style="font-size:20px;cursor:pointer;">😊</span>
+                  <div class="big-input-field">Nachricht schreiben…</div>
+                  <span style="font-size:20px;cursor:pointer;">📎</span>
+                  <div class="big-send-btn">➤</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="preview__panel" id="tab-media">
+          <div class="big-mockup">
+            <div class="big-mockup__bar">
+              <div class="mockup-dot red"></div>
+              <div class="mockup-dot yellow"></div>
+              <div class="mockup-dot green"></div>
+              <span style="margin-left:12px;font-size:13px;color:#aaa;">LetsChat – Medien teilen</span>
+            </div>
+            <div class="big-mockup__body" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;padding:40px;">
+              <div style="font-size:48px;">🖼️</div>
+              <div style="font-size:22px;font-weight:700;color:#fff;">Medien direkt im Chat</div>
+              <p style="color:#aaa;text-align:center;max-width:400px;">Bilder und Videos werden direkt im Chat-Fenster angezeigt. Per Klick öffnet sich der integrierte Medien-Viewer im Vollbild.</p>
+              <div class="media-grid-demo">
+                <div class="media-thumb" style="background:linear-gradient(135deg,#667eea,#764ba2);">🏔️</div>
+                <div class="media-thumb" style="background:linear-gradient(135deg,#f093fb,#f5576c);">🌅</div>
+                <div class="media-thumb" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">🌊</div>
+                <div class="media-thumb" style="background:linear-gradient(135deg,#43e97b,#38f9d7);">🌿</div>
+                <div class="media-thumb" style="background:linear-gradient(135deg,#fa709a,#fee140);">🎉</div>
+                <div class="media-thumb" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb);">📷</div>
+              </div>
+              <p style="color:#aaa;font-size:13px;">Drag &amp; Drop • Automatische Vorschau • Vollbild-Viewer</p>
+            </div>
+          </div>
+        </div>
+        <div class="preview__panel" id="tab-settings">
+          <div class="big-mockup">
+            <div class="big-mockup__bar">
+              <div class="mockup-dot red"></div>
+              <div class="mockup-dot yellow"></div>
+              <div class="mockup-dot green"></div>
+              <span style="margin-left:12px;font-size:13px;color:#aaa;">LetsChat – Einstellungen</span>
+            </div>
+            <div class="big-mockup__body" style="padding:32px;display:flex;flex-direction:column;gap:16px;">
+              <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;">⚙️ Einstellungen</div>
+              <div class="settings-row">
+                <div>
+                  <div style="font-weight:600;color:#fff;">Benachrichtigungen</div>
+                  <div style="font-size:12px;color:#aaa;">Desktop-Benachrichtigungen bei neuen Nachrichten</div>
+                </div>
+                <div class="toggle toggle--on"></div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div style="font-weight:600;color:#fff;">Dark Mode</div>
+                  <div style="font-size:12px;color:#aaa;">Dunkles Interface (Standard)</div>
+                </div>
+                <div class="toggle toggle--on"></div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div style="font-weight:600;color:#fff;">Im Tray minimieren</div>
+                  <div style="font-size:12px;color:#aaa;">App beim Schließen im System-Tray verstecken</div>
+                </div>
+                <div class="toggle toggle--on"></div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div style="font-weight:600;color:#fff;">Lesebestätigungen</div>
+                  <div style="font-size:12px;color:#aaa;">Blaue Haken senden wenn Nachricht gelesen</div>
+                </div>
+                <div class="toggle"></div>
+              </div>
+              <div class="settings-row">
+                <div>
+                  <div style="font-weight:600;color:#fff;">Autostart</div>
+                  <div style="font-size:12px;color:#aaa;">LetsChat beim Windows-Start automatisch starten</div>
+                </div>
+                <div class="toggle toggle--on"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── PLATFORMS ───── -->
+  <section class="section platforms" id="platforms">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__tag">Plattformen</div>
+        <h2 class="section__title">Heute Windows – bald überall</h2>
+        <p class="section__sub">LetsChat ist jetzt für Windows verfügbar. Android und iOS sind in Entwicklung und kommen bald.</p>
+      </div>
+      <div class="platforms__grid">
+
+        <div class="platform-card platform-card--available">
+          <div class="platform-card__status">
+            <span class="status-dot status-dot--green"></span> Verfügbar
+          </div>
+          <div class="platform-card__icon">
+            <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="88" rx="20" fill="#0078D4"/>
+              <path d="M16 16H44V44H16V16Z" fill="white"/>
+              <path d="M47 16H72V44H47V16Z" fill="white"/>
+              <path d="M16 47H44V72H16V47Z" fill="white"/>
+              <path d="M47 47H72V72H47V47Z" fill="white"/>
+            </svg>
+          </div>
+          <h3>Windows</h3>
+          <p>Native Desktop-App für Windows 10 &amp; 11. Inkl. Installer und System-Tray-Integration.</p>
+          <a href="#download" class="btn btn--primary">Jetzt herunterladen</a>
+        </div>
+
+        <div class="platform-card platform-card--soon">
+          <div class="platform-card__status">
+            <span class="status-dot status-dot--orange"></span> Bald verfügbar
+          </div>
+          <div class="platform-card__icon">
+            <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="88" rx="20" fill="#3DDC84"/>
+              <path d="M26 58V38C26 29.163 33.163 22 42 22H46C54.837 22 62 29.163 62 38V58" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              <rect x="32" y="56" width="24" height="14" rx="4" fill="white"/>
+              <circle cx="38" cy="63" r="2" fill="#3DDC84"/>
+              <circle cx="50" cy="63" r="2" fill="#3DDC84"/>
+              <path d="M20 42H26M62 42H68" stroke="white" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Android</h3>
+          <p>Die Android-App ist in aktiver Entwicklung. Erhalte dieselben Features auf deinem Smartphone.</p>
+          <button class="btn btn--ghost" disabled>In Entwicklung</button>
+        </div>
+
+        <div class="platform-card platform-card--soon">
+          <div class="platform-card__status">
+            <span class="status-dot status-dot--orange"></span> Bald verfügbar
+          </div>
+          <div class="platform-card__icon">
+            <svg viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="88" rx="20" fill="#000"/>
+              <rect x="28" y="10" width="32" height="68" rx="8" fill="white"/>
+              <rect x="32" y="16" width="24" height="52" rx="4" fill="#000"/>
+              <circle cx="44" cy="74" r="3" fill="white"/>
+              <rect x="38" y="12" width="12" height="2" rx="1" fill="#ccc"/>
+            </svg>
+          </div>
+          <h3>iOS</h3>
+          <p>Auch für iPhone und iPad wird LetsChat bald verfügbar sein – mit nahtloser Synchronisation.</p>
+          <button class="btn btn--ghost" disabled>In Entwicklung</button>
+        </div>
+
+      </div>
+      <div class="platforms__notify">
+        <div class="notify-box">
+          <div class="notify-box__icon">🔔</div>
+          <div>
+            <div class="notify-box__title">Informiert bleiben</div>
+            <p>Trag dich ein und wir benachrichtigen dich, sobald LetsChat für Android &amp; iOS verfügbar ist.</p>
+          </div>
+          <form class="notify-form" id="notifyForm">
+            <input type="email" placeholder="Deine E-Mail-Adresse" class="notify-input" id="notifyEmail" required />
+            <button type="submit" class="btn btn--primary">Benachrichtigen</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── DOWNLOAD ───── -->
+  <section class="section download-section" id="download">
+    <div class="download-bg">
+      <div class="blob blob--dl1"></div>
+      <div class="blob blob--dl2"></div>
+    </div>
+    <div class="container">
+      <div class="download-box">
+        <div class="download-box__left">
+          <h2>LetsChat herunterladen</h2>
+          <p>Kostenlos, sicher und ohne Registrierung bei Drittanbietern. Starte noch heute deinen privaten Messenger.</p>
+          <ul class="download-features">
+            <li>✓ Windows 10 &amp; 11 kompatibel</li>
+            <li>✓ Einfache Installation per Installer</li>
+            <li>✓ Kein Account bei Dritten nötig</li>
+            <li>✓ Automatische Updates</li>
+          </ul>
+          <div class="download-actions">
+            <a href="LetsChat-Setup.exe" download class="btn btn--primary btn--large" id="downloadBtn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 16L7 11h3V4h4v7h3L12 16Z" fill="currentColor"/><path d="M5 18h14v2H5v-2Z" fill="currentColor"/></svg>
+              LetsChat-Setup.exe herunterladen
+            </a>
+            <div class="download-meta">Version 1.0.0 • Windows 10/11 • ~85 MB</div>
+          </div>
+        </div>
+        <div class="download-box__right">
+          <div class="download-steps">
+            <div class="step">
+              <div class="step__num">1</div>
+              <div class="step__text">
+                <strong>Installer herunterladen</strong>
+                <span>Klicke auf den Download-Button</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">2</div>
+              <div class="step__text">
+                <strong>Setup ausführen</strong>
+                <span>Doppelklick auf LetsChat-Setup.exe</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">3</div>
+              <div class="step__text">
+                <strong>Account erstellen</strong>
+                <span>Einfach registrieren und loslegen</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num">4</div>
+              <div class="step__text">
+                <strong>Chatten!</strong>
+                <span>Kontakte hinzufügen und chatten</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FAQ ───── -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section__head">
+        <div class="section__tag">FAQ</div>
+        <h2 class="section__title">Häufige Fragen</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq__item">
+          <button class="faq__q">Ist LetsChat wirklich kostenlos? <span class="faq__arrow">▼</span></button>
+          <div class="faq__a">Ja, LetsChat ist vollständig kostenlos – ohne versteckte Kosten, Abos oder Werbung. Immer.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Wie sicher ist LetsChat? <span class="faq__arrow">▼</span></button>
+          <div class="faq__a">Alle Nachrichten werden mit AES-GCM Ende-zu-Ende-verschlüsselt. Deine Daten verlassen dein Gerät nur verschlüsselt und können von niemandem außer dem Empfänger gelesen werden.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Brauche ich eine Telefonnummer zur Registrierung? <span class="faq__arrow">▼</span></button>
+          <div class="faq__a">Nein. LetsChat benötigt keine Telefonnummer. Du registrierst dich einfach mit einem Benutzernamen und Passwort.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Wann kommt LetsChat für Android und iOS? <span class="faq__arrow">▼</span></button>
+          <div class="faq__a">Die mobilen Apps sind aktiv in Entwicklung. Trag dich im Bereich "Plattformen" ein, um eine Benachrichtigung zu erhalten sobald sie verfügbar sind.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Welche Dateiformate kann ich senden? <span class="faq__arrow">▼</span></button>
+          <div class="faq__a">Du kannst Bilder (JPG, PNG, GIF, WebP), Videos (MP4, WebM, MOV) und andere Dateien über den Medien-Versand schicken.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">Funktioniert LetsChat im Netzwerk/hinter einer Firewall? <span class="faq__arrow">▼</span></button>
+          <div class="faq__a">LetsChat kommuniziert über Standard HTTP/WebSocket-Protokolle und funktioniert in den meisten Netzwerken problemlos. Bei speziellen Firmen-Firewalls wende dich bitte an deinen Administrator.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="nav__logo">
+            <div class="nav__logo-icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="10" fill="url(#grad2)"/>
+                <path d="M20 8C13.373 8 8 13.149 8 19.5C8 22.07 8.9 24.44 10.41 26.34L8.5 32L14.36 30.12C16.12 31.01 18.01 31.5 20 31.5C26.627 31.5 32 26.351 32 20C32 13.649 26.627 8 20 8Z" fill="white"/>
+                <circle cx="15" cy="20" r="1.8" fill="url(#grad2)"/>
+                <circle cx="20" cy="20" r="1.8" fill="url(#grad2)"/>
+                <circle cx="25" cy="20" r="1.8" fill="url(#grad2)"/>
+                <defs>
+                  <linearGradient id="grad2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#25D366"/>
+                    <stop offset="1" stop-color="#128C7E"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span>LetsChat</span>
+          </div>
+          <p>Der private Desktop-Messenger für Windows.<br/>Bald auch auf Android &amp; iOS.</p>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <h4>Produkt</h4>
+            <a href="#features">Features</a>
+            <a href="#download">Download</a>
+            <a href="#platforms">Plattformen</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer__col">
+            <h4>Rechtliches</h4>
+            <a href="#">Datenschutz</a>
+            <a href="#">Nutzungsbedingungen</a>
+            <a href="#">Impressum</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 LetsChat. Alle Rechte vorbehalten.</span>
+        <span>Made with ♥ for privacy</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

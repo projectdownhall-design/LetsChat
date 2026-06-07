@@ -1,0 +1,127 @@
+﻿ALLGEMEINE GESCHÄFTSBEDINGUNGEN (AGB)
+LetsChat – Sicherer Desktop-Messenger
+Stand: Januar 2026 · Version 1.0.0
+
+================================================================================
+
+1. GELTUNGSBEREICH UND VERTRAGSPARTEIEN
+
+Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB") regeln die Nutzung
+der Desktop-Anwendung LetsChat (nachfolgend „App") zwischen dem LetsChat Team
+(nachfolgend „Anbieter") und Ihnen als Nutzer (nachfolgend „Nutzer"). Mit der
+Installation und Nutzung der App erkennen Sie diese AGB als verbindlich an.
+Sofern Sie diesen Bedingungen nicht zustimmen, ist eine Nutzung der App nicht
+gestattet.
+
+--------------------------------------------------------------------------------
+
+2. LEISTUNGSBESCHREIBUNG
+
+LetsChat ist ein kostenfreier Desktop-Messenger für Microsoft Windows. Die App
+ermöglicht den Austausch von Textnachrichten sowie von Mediendateien zwischen
+registrierten Nutzern. Sämtliche Nachrichten werden Ende-zu-Ende verschlüsselt
+(AES-GCM). Der Anbieter stellt die App unentgeltlich zur Verfügung. Ein Anspruch
+auf einen bestimmten Funktionsumfang oder auf die dauerhafte Bereitstellung
+einzelner Funktionen besteht nicht.
+
+--------------------------------------------------------------------------------
+
+3. REGISTRIERUNG UND NUTZERKONTO
+
+Zur Nutzung der App ist die Einrichtung eines Nutzerkontos mit Benutzername und
+Passwort erforderlich. Der Nutzer ist verpflichtet, bei der Registrierung
+wahrheitsgemäße Angaben zu machen. Das gewählte Passwort ist geheim zu halten
+und vor dem Zugriff Dritter zu schützen. Der Nutzer ist für sämtliche
+Aktivitäten verantwortlich, die über sein Konto vorgenommen werden. Besteht der
+Verdacht, dass Dritte unberechtigt Kenntnis vom Passwort erlangt haben, ist
+dieses unverzüglich zu ändern.
+
+--------------------------------------------------------------------------------
+
+4. ERLAUBTE UND VERBOTENE NUTZUNG
+
+Die App darf ausschließlich für rechtmäßige Zwecke genutzt werden. Untersagt
+sind insbesondere:
+
+  - der Versand unerwünschter Werbung oder von Massennachrichten (Spam);
+  - die Verbreitung illegaler, rechtswidriger, beleidigender oder
+    jugendgefährdender Inhalte;
+  - die Belästigung, Bedrohung, Nötigung oder das Mobbing anderer Personen
+    (Harassment);
+  - die Verbreitung von Schadsoftware (Malware, Viren, Trojaner, Würmer);
+  - jede Handlung, die geeignet ist, die Funktionsfähigkeit der App oder der
+    Geräte anderer Nutzer zu beeinträchtigen oder Sicherheitsmechanismen zu
+    umgehen.
+
+Bei Verstößen gegen diese Nutzungsregeln behält sich der Anbieter rechtliche
+Schritte vor.
+
+--------------------------------------------------------------------------------
+
+5. DATENSCHUTZ UND DATENSPEICHERUNG
+
+Sämtliche Nachrichten und Einstellungen werden ausschließlich lokal in einer
+SQLite-Datenbank auf dem Gerät des Nutzers gespeichert. Eine Speicherung in
+einer Cloud findet nicht statt. Der Anbieter gibt keine Nutzerdaten an Dritte
+weiter. Alle Nachrichten werden mit dem Verfahren AES-GCM verschlüsselt. Der
+Nutzer ist für die Sicherung (Backup) seiner lokal gespeicherten Daten selbst
+verantwortlich. Mit der Deinstallation der App können die lokal gespeicherten
+Daten auf Wunsch des Nutzers vollständig gelöscht werden.
+
+--------------------------------------------------------------------------------
+
+6. HAFTUNGSAUSSCHLUSS UND GEWÄHRLEISTUNG
+
+Die App wird „wie besehen" („as is") und ohne jegliche ausdrückliche oder
+stillschweigende Gewährleistung bereitgestellt. Der Anbieter übernimmt
+insbesondere keine Gewähr für die Eignung der App für einen bestimmten Zweck
+oder für die Fehlerfreiheit der Software. Der Anbieter haftet – soweit
+gesetzlich zulässig – nicht für Schäden, die aus der Nutzung oder der
+Nichtverfügbarkeit der App entstehen. Die Haftung für Vorsatz und grobe
+Fahrlässigkeit sowie für Schäden aus der Verletzung des Lebens, des Körpers oder
+der Gesundheit bleibt hiervon unberührt.
+
+--------------------------------------------------------------------------------
+
+7. VERFÜGBARKEIT DES DIENSTES
+
+Der Anbieter ist bemüht, die App dauerhaft und störungsfrei verfügbar zu halten,
+übernimmt jedoch keine Gewähr für eine ununterbrochene Verfügbarkeit.
+Wartungsarbeiten, technische Störungen oder Ereignisse höherer Gewalt können zu
+vorübergehenden Einschränkungen oder zum Ausfall einzelner Funktionen führen.
+
+--------------------------------------------------------------------------------
+
+8. ÄNDERUNGEN DER AGB
+
+Der Anbieter behält sich vor, diese AGB jederzeit mit Wirkung für die Zukunft zu
+ändern. Über wesentliche Änderungen wird der Nutzer in geeigneter Weise
+informiert. Die fortgesetzte Nutzung der App nach Inkrafttreten der Änderungen
+gilt als Zustimmung zu den geänderten AGB.
+
+--------------------------------------------------------------------------------
+
+9. ANWENDBARES RECHT
+
+Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des
+UN-Kaufrechts (CISG). Ist der Nutzer Verbraucher, so gelten zwingende
+verbraucherschützende Vorschriften des Staates, in dem der Nutzer seinen
+gewöhnlichen Aufenthalt hat, vorrangig.
+
+--------------------------------------------------------------------------------
+
+10. SCHLUSSBESTIMMUNGEN
+
+Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder
+werden, so bleibt die Wirksamkeit der übrigen Bestimmungen hiervon unberührt. An
+die Stelle der unwirksamen Bestimmung tritt diejenige gesetzlich zulässige
+Regelung, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten
+kommt. Mündliche Nebenabreden bestehen nicht. Änderungen und Ergänzungen dieser
+AGB bedürfen der Textform.
+
+================================================================================
+
+Durch Klicken auf „Ich akzeptiere die Vereinbarung" bestätigen Sie, dass Sie
+diese AGB gelesen haben und mit ihnen einverstanden sind.
+
+© 2026 LetsChat Team. Alle Rechte vorbehalten.

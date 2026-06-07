@@ -1,0 +1,111 @@
+{
+  "name": "letschat",
+  "version": "1.0.0",
+  "description": "LetsChat - A WhatsApp-like Desktop Messenger",
+  "main": "dist/electron/main.js",
+  "author": "LetsChat Team",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,VITE,ELECTRON -c green,cyan,yellow \"npm run start:server\" \"npm run dev:vite\" \"npm run dev:electron\"",
+    "dev:vite": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && npm run build:electron && cross-env NODE_ENV=development electron .",
+    "start:server": "cross-env NODE_ENV=development ts-node --project tsconfig.server.json server/server.ts",
+    "build": "npm run build:vite && npm run build:electron && npm run build:server && electron-builder",
+    "build:vite": "vite build",
+    "build:electron": "tsc --project tsconfig.electron.json",
+    "build:server": "tsc --project tsconfig.server.json",
+    "create-assets": "node installer/create-assets.js",
+    "build:installer": "node installer/create-assets.js && node -e \"const {execSync}=require('child_process');execSync('\\\"C:\\\\Program Files (x86)\\\\Inno Setup 6\\\\ISCC.exe\\\" installer/setup.iss',{stdio:'inherit'})\"",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "^3.10.9",
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "canvas": "^3.2.3",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.6.1",
+    "electron-log": "^5.4.4",
+    "electron-store": "^8.2.0",
+    "electron-updater": "^6.8.9",
+    "emoji-picker-react": "^4.9.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.21.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.2.3",
+    "react-window": "^1.8.10",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "uuid": "^10.0.0",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.9.1",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-window": "^1.8.8",
+    "@types/uuid": "^10.0.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "com.letschat.app",
+    "productName": "LetsChat",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "dist/electron/**/*",
+      "server/**/*",
+      "installer/assets/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "installer/assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "installer/assets/icon.ico",
+      "uninstallerIcon": "installer/assets/icon.ico",
+      "installerHeaderIcon": "installer/assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "LetsChat"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "DEIN_GITHUB_USERNAME",
+      "repo": "letschat",
+      "releaseType": "release"
+    }
+  }
+}
