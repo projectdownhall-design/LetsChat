@@ -103,8 +103,8 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "DEIN_GITHUB_USERNAME",
-      "repo": "letschat",
+      "owner": "projectdownhall-design",
+      "repo": "LetsChat",
       "releaseType": "release"
     }
   }
