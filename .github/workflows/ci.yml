@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel superseded runs on the same ref to save CI minutes.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Typecheck & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # System libraries required to build the native `canvas` dependency.
+      - name: Install canvas build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential libcairo2-dev libpango1.0-dev \
+            libjpeg-dev libgif-dev librsvg2-dev
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck (renderer)
+        run: npx tsc --project tsconfig.json --noEmit
+
+      - name: Build renderer (Vite)
+        run: npm run build:vite
+
+      # `build:electron` / `build:server` run `tsc` with emit, so they also
+      # serve as the typecheck for the Electron and server code.
+      - name: Build Electron main/preload
+        run: npm run build:electron
+
+      - name: Build server
+        run: npm run build:server
+
+      - name: Verify installer asset generation (canvas)
+        run: npm run create-assets

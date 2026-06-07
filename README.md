@@ -1,5 +1,9 @@
 # LetsChat - Desktop Messenger
 
+[![CI](https://github.com/projectdownhall-design/LetsChat/actions/workflows/ci.yml/badge.svg)](https://github.com/projectdownhall-design/LetsChat/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#lizenz)
+[![Electron](https://img.shields.io/badge/Electron-33-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
+
 Ein WhatsApp-ähnlicher Desktop-Messenger für Windows, gebaut mit Electron, React und Node.js.
 
 ## Schnellstart (3 Schritte)
