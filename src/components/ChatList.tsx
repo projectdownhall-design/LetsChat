@@ -57,22 +57,22 @@ export const ChatList: React.FC<Props> = ({
 
   return (
     <>
-      <div className="flex flex-col h-full bg-wa-bg-sidebar border-r border-wa-border">
-        <div className="flex items-center justify-between px-4 py-3 bg-wa-panel-header">
+      <div className="flex flex-col h-full bg-lc-bg-sidebar border-r border-lc-border">
+        <div className="flex items-center justify-between px-4 py-3 bg-lc-panel-header">
           <div className="flex items-center gap-3">
             <ContactAvatar
               name={user?.displayName || '?'}
               avatarUrl={user?.avatarUrl}
               size="md"
             />
-            <span className="font-semibold text-wa-text text-base hidden sm:block">LetsChat</span>
+            <span className="font-semibold text-lc-text text-base hidden sm:block">LetsChat</span>
           </div>
           <div className="flex items-center gap-1">
             <button
               onClick={() => { setShowNewChat(v => !v); setShowSearch(false); }}
               className={clsx(
                 'p-2 rounded-full transition-colors',
-                showNewChat ? 'text-wa-green bg-wa-hover' : 'text-wa-icon hover:bg-wa-hover hover:text-wa-text'
+                showNewChat ? 'text-lc-green bg-lc-hover' : 'text-lc-icon hover:bg-lc-hover hover:text-lc-text'
               )}
               title="Neuen Chat starten"
             >
@@ -84,7 +84,7 @@ export const ChatList: React.FC<Props> = ({
               onClick={() => { setShowSearch(v => !v); setShowNewChat(false); }}
               className={clsx(
                 'p-2 rounded-full transition-colors',
-                showSearch ? 'text-wa-green bg-wa-hover' : 'text-wa-icon hover:bg-wa-hover hover:text-wa-text'
+                showSearch ? 'text-lc-green bg-lc-hover' : 'text-lc-icon hover:bg-lc-hover hover:text-lc-text'
               )}
               title="Suchen"
             >
@@ -94,7 +94,7 @@ export const ChatList: React.FC<Props> = ({
             </button>
             <button
               onClick={() => setShowSettings(true)}
-              className="p-2 rounded-full text-wa-icon hover:bg-wa-hover hover:text-wa-text transition-colors"
+              className="p-2 rounded-full text-lc-icon hover:bg-lc-hover hover:text-lc-text transition-colors"
               title="Einstellungen"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,7 +105,7 @@ export const ChatList: React.FC<Props> = ({
         </div>
 
         {(showSearch || showNewChat) && (
-          <div className="py-2 border-b border-wa-border">
+          <div className="py-2 border-b border-lc-border">
             <SearchBar
               value={searchQuery}
               onChange={setSearchQuery}
@@ -118,11 +118,11 @@ export const ChatList: React.FC<Props> = ({
         <div className="flex-1 overflow-y-auto scrollbar-thin">
           {showNewChat ? (
             <>
-              <div className="px-4 py-2 text-xs text-wa-text-muted font-medium uppercase tracking-wider">
+              <div className="px-4 py-2 text-xs text-lc-text-muted font-medium uppercase tracking-wider">
                 Kontakte auf LetsChat
               </div>
               {availableContacts.length === 0 ? (
-                <div className="px-4 py-8 text-center text-wa-text-muted text-sm">
+                <div className="px-4 py-8 text-center text-lc-text-muted text-sm">
                   Keine Kontakte gefunden
                 </div>
               ) : (
@@ -130,7 +130,7 @@ export const ChatList: React.FC<Props> = ({
                   <button
                     key={contact.id}
                     onClick={() => { onNewChat(contact); setShowNewChat(false); setSearchQuery(''); }}
-                    className="w-full flex items-center gap-3 px-4 py-3 hover:bg-wa-hover transition-colors"
+                    className="w-full flex items-center gap-3 px-4 py-3 hover:bg-lc-hover transition-colors"
                   >
                     <ContactAvatar
                       name={contact.displayName}
@@ -140,8 +140,8 @@ export const ChatList: React.FC<Props> = ({
                       showStatus
                     />
                     <div className="flex-1 text-left min-w-0">
-                      <p className="text-wa-text font-medium truncate">{contact.displayName}</p>
-                      <p className="text-wa-text-muted text-sm truncate">@{contact.username}</p>
+                      <p className="text-lc-text font-medium truncate">{contact.displayName}</p>
+                      <p className="text-lc-text-muted text-sm truncate">@{contact.username}</p>
                     </div>
                   </button>
                 ))
@@ -151,7 +151,7 @@ export const ChatList: React.FC<Props> = ({
             <>
               {filteredChats.length === 0 && (
                 <div className="px-4 py-12 text-center">
-                  <div className="text-wa-text-muted text-sm">
+                  <div className="text-lc-text-muted text-sm">
                     {searchQuery ? 'Keine Chats gefunden' : 'Noch keine Chats. Starte einen neuen Chat!'}
                   </div>
                 </div>
@@ -199,8 +199,8 @@ const ChatListItem: React.FC<ChatListItemProps> = ({ chat, isActive, currentUser
     <button
       onClick={onClick}
       className={clsx(
-        'w-full flex items-center gap-3 px-4 py-3 transition-colors border-b border-wa-border/30',
-        isActive ? 'bg-wa-hover' : 'hover:bg-wa-hover/50'
+        'w-full flex items-center gap-3 px-4 py-3 transition-colors border-b border-lc-border/30',
+        isActive ? 'bg-lc-hover' : 'hover:bg-lc-hover/50'
       )}
     >
       <ContactAvatar
@@ -212,11 +212,11 @@ const ChatListItem: React.FC<ChatListItemProps> = ({ chat, isActive, currentUser
       />
       <div className="flex-1 min-w-0 text-left">
         <div className="flex items-center justify-between">
-          <span className="text-wa-text font-medium truncate">{chat.contact.displayName}</span>
+          <span className="text-lc-text font-medium truncate">{chat.contact.displayName}</span>
           {lastMsg && (
             <span className={clsx(
               'text-xs flex-shrink-0 ml-1',
-              chat.unreadCount > 0 ? 'text-wa-green' : 'text-wa-text-muted'
+              chat.unreadCount > 0 ? 'text-lc-green' : 'text-lc-text-muted'
             )}>
               {formatTime(lastMsg.createdAt)}
             </span>
@@ -225,16 +225,16 @@ const ChatListItem: React.FC<ChatListItemProps> = ({ chat, isActive, currentUser
         <div className="flex items-center justify-between mt-0.5">
           <div className="flex items-center gap-1 min-w-0">
             {isOwn && lastMsg && (
-              <StatusTick status={lastMsg.status} className="text-wa-text-muted flex-shrink-0" />
+              <StatusTick status={lastMsg.status} className="text-lc-text-muted flex-shrink-0" />
             )}
             {chat.typing ? (
-              <span className="text-wa-green text-sm italic">schreibt...</span>
+              <span className="text-lc-green text-sm italic">schreibt...</span>
             ) : (
-              <span className="text-wa-text-muted text-sm truncate">{previewText}</span>
+              <span className="text-lc-text-muted text-sm truncate">{previewText}</span>
             )}
           </div>
           {chat.unreadCount > 0 && (
-            <span className="flex-shrink-0 ml-1 bg-wa-green text-white text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center px-1 font-medium">
+            <span className="flex-shrink-0 ml-1 bg-lc-green text-white text-xs rounded-full min-w-[20px] h-5 flex items-center justify-center px-1 font-medium">
               {chat.unreadCount > 99 ? '99+' : chat.unreadCount}
             </span>
           )}

@@ -40,8 +40,8 @@ export const MessageBubble: React.FC<Props> = ({
       <div className={clsx('flex items-end gap-2 mb-1 px-4', isOwn ? 'flex-row-reverse' : 'flex-row')}>
         <div className={clsx(
           'px-3 py-2 rounded-lg text-sm italic',
-          isOwn ? 'bg-wa-bubble-out' : 'bg-wa-bubble-in',
-          'text-wa-text-muted'
+          isOwn ? 'bg-lc-bubble-out' : 'bg-lc-bubble-in',
+          'text-lc-text-muted'
         )}>
           🚫 Nachricht wurde gelöscht
         </div>
@@ -89,11 +89,11 @@ export const MessageBubble: React.FC<Props> = ({
         <div className={clsx('max-w-[65%] relative', isOwn ? 'items-end' : 'items-start')}>
           {replyMessage && (
             <div className={clsx(
-              'mb-1 px-3 py-1.5 rounded-t-lg border-l-4 border-wa-green bg-black/20 text-xs cursor-pointer',
+              'mb-1 px-3 py-1.5 rounded-t-lg border-l-4 border-lc-green bg-black/20 text-xs cursor-pointer',
               isOwn ? 'bg-black/30' : 'bg-black/20'
             )}>
-              <p className="text-wa-green font-medium truncate">{replyMessage.senderName}</p>
-              <p className="text-wa-text-muted truncate">
+              <p className="text-lc-green font-medium truncate">{replyMessage.senderName}</p>
+              <p className="text-lc-text-muted truncate">
                 {replyMessage.type !== 'text' ? `📎 ${replyMessage.type}` : replyMessage.content}
               </p>
             </div>
@@ -102,11 +102,11 @@ export const MessageBubble: React.FC<Props> = ({
           <div
             className={clsx(
               'relative rounded-lg px-3 py-2 shadow-sm',
-              isOwn ? 'bg-wa-bubble-out rounded-tr-none' : 'bg-wa-bubble-in rounded-tl-none'
+              isOwn ? 'bg-lc-bubble-out rounded-tr-none' : 'bg-lc-bubble-in rounded-tl-none'
             )}
           >
             {!isOwn && (
-              <p className="text-wa-green text-xs font-semibold mb-1">{message.senderName}</p>
+              <p className="text-lc-green text-xs font-semibold mb-1">{message.senderName}</p>
             )}
 
             {message.type === 'image' && mediaUrl && (
@@ -132,7 +132,7 @@ export const MessageBubble: React.FC<Props> = ({
                 href={mediaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 mb-1 text-wa-green hover:underline"
+                className="flex items-center gap-2 mb-1 text-lc-green hover:underline"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
@@ -142,12 +142,12 @@ export const MessageBubble: React.FC<Props> = ({
             )}
 
             {message.type === 'text' && (
-              <p className="text-wa-text text-sm whitespace-pre-wrap break-words">{message.content}</p>
+              <p className="text-lc-text text-sm whitespace-pre-wrap break-words">{message.content}</p>
             )}
 
             <div className="flex items-center justify-end gap-1 mt-0.5 -mb-0.5">
-              <span className="text-[10px] text-wa-text-muted">{timeStr}</span>
-              {isOwn && <StatusTick status={message.status} className="text-wa-text-muted" />}
+              <span className="text-[10px] text-lc-text-muted">{timeStr}</span>
+              {isOwn && <StatusTick status={message.status} className="text-lc-text-muted" />}
             </div>
 
             <div
@@ -158,7 +158,7 @@ export const MessageBubble: React.FC<Props> = ({
             >
               <button
                 onClick={() => setShowReactions(v => !v)}
-                className="p-1 rounded-full bg-wa-bg-chat hover:bg-wa-hover text-wa-text-muted hover:text-wa-text transition-colors"
+                className="p-1 rounded-full bg-lc-bg-chat hover:bg-lc-hover text-lc-text-muted hover:text-lc-text transition-colors"
                 title="Reaktion"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -167,7 +167,7 @@ export const MessageBubble: React.FC<Props> = ({
               </button>
               <button
                 onClick={() => { setShowMenu(v => !v); }}
-                className="p-1 rounded-full bg-wa-bg-chat hover:bg-wa-hover text-wa-text-muted hover:text-wa-text transition-colors"
+                className="p-1 rounded-full bg-lc-bg-chat hover:bg-lc-hover text-lc-text-muted hover:text-lc-text transition-colors"
                 title="Optionen"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -178,7 +178,7 @@ export const MessageBubble: React.FC<Props> = ({
 
             {showReactions && (
               <div className={clsx(
-                'absolute z-10 flex gap-1 p-2 bg-wa-header rounded-full shadow-lg -top-12',
+                'absolute z-10 flex gap-1 p-2 bg-lc-header rounded-full shadow-lg -top-12',
                 isOwn ? 'right-0' : 'left-0'
               )}>
                 {REACTIONS.map(emoji => (
@@ -195,25 +195,25 @@ export const MessageBubble: React.FC<Props> = ({
 
             {showMenu && (
               <div className={clsx(
-                'absolute z-10 bg-wa-header border border-wa-border rounded-lg shadow-xl py-1 min-w-36 -top-2',
+                'absolute z-10 bg-lc-header border border-lc-border rounded-lg shadow-xl py-1 min-w-36 -top-2',
                 isOwn ? 'right-full mr-1' : 'left-full ml-1'
               )}>
                 <button
                   onClick={() => { onReply(message); setShowMenu(false); }}
-                  className="w-full text-left px-4 py-2 text-sm text-wa-text hover:bg-wa-hover transition-colors"
+                  className="w-full text-left px-4 py-2 text-sm text-lc-text hover:bg-lc-hover transition-colors"
                 >
                   Antworten
                 </button>
                 <button
                   onClick={() => { onDelete(message.id, 'me'); setShowMenu(false); }}
-                  className="w-full text-left px-4 py-2 text-sm text-wa-text hover:bg-wa-hover transition-colors"
+                  className="w-full text-left px-4 py-2 text-sm text-lc-text hover:bg-lc-hover transition-colors"
                 >
                   Für mich löschen
                 </button>
                 {isOwn && (
                   <button
                     onClick={() => { onDelete(message.id, 'all'); setShowMenu(false); }}
-                    className="w-full text-left px-4 py-2 text-sm text-red-400 hover:bg-wa-hover transition-colors"
+                    className="w-full text-left px-4 py-2 text-sm text-red-400 hover:bg-lc-hover transition-colors"
                   >
                     Für alle löschen
                   </button>
@@ -234,8 +234,8 @@ export const MessageBubble: React.FC<Props> = ({
                   className={clsx(
                     'flex items-center gap-1 px-2 py-0.5 rounded-full text-xs border transition-colors',
                     userIds.includes(currentUserId)
-                      ? 'bg-wa-green/20 border-wa-green text-wa-green'
-                      : 'bg-wa-bubble-in border-wa-border text-wa-text hover:border-wa-green'
+                      ? 'bg-lc-green/20 border-lc-green text-lc-green'
+                      : 'bg-lc-bubble-in border-lc-border text-lc-text hover:border-lc-green'
                   )}
                 >
                   <span>{emoji}</span>

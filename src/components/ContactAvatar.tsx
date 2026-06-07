@@ -81,9 +81,9 @@ export const ContactAvatar: React.FC<Props> = ({
       {showStatus && (
         <span
           className={clsx(
-            'absolute bottom-0 right-0 rounded-full border-2 border-wa-bg-sidebar',
+            'absolute bottom-0 right-0 rounded-full border-2 border-lc-bg-sidebar',
             statusSizeClasses[size],
-            online ? 'bg-wa-green' : 'bg-wa-text-muted'
+            online ? 'bg-lc-green' : 'bg-lc-text-muted'
           )}
         />
       )}

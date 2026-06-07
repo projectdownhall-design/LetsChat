@@ -12,9 +12,9 @@ interface Props {
 export const TermsOfService: React.FC<Props> = ({ onAccept, onDecline }) => {
   return (
     <div className="fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4 animate-fade-in">
-      <div className="w-full max-w-2xl max-h-[85vh] flex flex-col rounded-xl bg-[#1B2126] border border-wa-border shadow-2xl overflow-hidden">
+      <div className="w-full max-w-2xl max-h-[85vh] flex flex-col rounded-xl bg-[#1B2126] border border-lc-border shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="flex items-center gap-3 px-6 py-4 bg-[#202C33] border-b border-wa-border">
+        <div className="flex items-center gap-3 px-6 py-4 bg-[#202C33] border-b border-lc-border">
           <div className="w-10 h-10 rounded-full bg-[#00A884] flex items-center justify-center flex-shrink-0">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -107,7 +107,7 @@ export const TermsOfService: React.FC<Props> = ({ onAccept, onDecline }) => {
         </div>
 
         {/* Actions */}
-        <div className="flex items-center justify-end gap-3 px-6 py-4 bg-[#202C33] border-t border-wa-border">
+        <div className="flex items-center justify-end gap-3 px-6 py-4 bg-[#202C33] border-t border-lc-border">
           <button
             onClick={onDecline}
             className="px-5 py-2 rounded-lg text-sm font-medium text-[#8696A0] hover:text-white hover:bg-white/10 transition-colors"

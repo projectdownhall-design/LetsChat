@@ -95,25 +95,25 @@ export const SettingsPanel: React.FC<Props> = ({ onClose }) => {
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-start animate-fade-in" onClick={onClose}>
       <div
-        className="w-80 h-full bg-wa-bg-sidebar border-r border-wa-border shadow-2xl overflow-y-auto"
+        className="w-80 h-full bg-lc-bg-sidebar border-r border-lc-border shadow-2xl overflow-y-auto"
         onClick={e => e.stopPropagation()}
       >
-        <div className="flex items-center gap-3 px-4 py-4 bg-wa-panel-header">
+        <div className="flex items-center gap-3 px-4 py-4 bg-lc-panel-header">
           <button
             onClick={onClose}
-            className="text-wa-icon hover:text-wa-text transition-colors"
+            className="text-lc-icon hover:text-lc-text transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <h2 className="text-wa-text font-semibold">Einstellungen</h2>
+          <h2 className="text-lc-text font-semibold">Einstellungen</h2>
         </div>
 
         <div className="p-4 space-y-6">
           {/* Profile */}
           <section>
-            <h3 className="text-wa-text-muted text-xs font-medium uppercase tracking-wider mb-3">Profil</h3>
+            <h3 className="text-lc-text-muted text-xs font-medium uppercase tracking-wider mb-3">Profil</h3>
             <div className="flex flex-col items-center gap-4">
               <div className="relative">
                 <ContactAvatar
@@ -141,41 +141,41 @@ export const SettingsPanel: React.FC<Props> = ({ onClose }) => {
               </div>
 
               <div className="w-full space-y-2">
-                <label className="text-wa-text-muted text-xs">Anzeigename</label>
+                <label className="text-lc-text-muted text-xs">Anzeigename</label>
                 <input
                   type="text"
                   value={displayName}
                   onChange={e => setDisplayName(e.target.value)}
-                  className="w-full bg-wa-input-bg text-wa-text px-3 py-2 rounded-lg text-sm outline-none border border-transparent focus:border-wa-green"
+                  className="w-full bg-lc-input-bg text-lc-text px-3 py-2 rounded-lg text-sm outline-none border border-transparent focus:border-lc-green"
                 />
-                <p className="text-wa-text-muted text-xs">@{user?.username}</p>
+                <p className="text-lc-text-muted text-xs">@{user?.username}</p>
               </div>
 
               <button
                 onClick={handleSaveProfile}
                 disabled={saving || !displayName.trim()}
-                className="w-full py-2 bg-wa-green hover:bg-wa-green/90 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                className="w-full py-2 bg-lc-green hover:bg-lc-green/90 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
               >
                 {saving ? 'Speichern...' : 'Profil speichern'}
               </button>
 
               {message && (
-                <p className="text-wa-green text-sm text-center">{message}</p>
+                <p className="text-lc-green text-sm text-center">{message}</p>
               )}
             </div>
           </section>
 
           {/* Appearance */}
           <section>
-            <h3 className="text-wa-text-muted text-xs font-medium uppercase tracking-wider mb-3">Darstellung</h3>
+            <h3 className="text-lc-text-muted text-xs font-medium uppercase tracking-wider mb-3">Darstellung</h3>
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-wa-text text-sm">Dark Mode</span>
+                <span className="text-lc-text text-sm">Dark Mode</span>
                 <button
                   onClick={() => setDarkMode(!darkMode)}
                   className={clsx(
                     'relative w-11 h-6 rounded-full transition-colors',
-                    darkMode ? 'bg-wa-green' : 'bg-wa-border'
+                    darkMode ? 'bg-lc-green' : 'bg-lc-border'
                   )}
                 >
                   <span className={clsx(
@@ -190,24 +190,24 @@ export const SettingsPanel: React.FC<Props> = ({ onClose }) => {
           {/* Zoom (desktop only) */}
           {window.electronAPI && (
             <section>
-              <h3 className="text-wa-text-muted text-xs font-medium uppercase tracking-wider mb-3">Zoom</h3>
+              <h3 className="text-lc-text-muted text-xs font-medium uppercase tracking-wider mb-3">Zoom</h3>
               <div className="flex gap-2">
                 <button
                   onClick={zoomOut}
-                  className="flex-1 py-2 bg-wa-hover text-wa-text rounded-lg text-sm hover:bg-wa-border transition-colors"
+                  className="flex-1 py-2 bg-lc-hover text-lc-text rounded-lg text-sm hover:bg-lc-border transition-colors"
                 >
                   A-
                 </button>
                 <button
                   onClick={resetZoom}
                   title="Auf 100% zurücksetzen"
-                  className="flex-1 py-2 bg-wa-hover text-wa-text rounded-lg text-sm hover:bg-wa-border transition-colors tabular-nums"
+                  className="flex-1 py-2 bg-lc-hover text-lc-text rounded-lg text-sm hover:bg-lc-border transition-colors tabular-nums"
                 >
                   {Math.round(zoomFactor * 100)}%
                 </button>
                 <button
                   onClick={zoomIn}
-                  className="flex-1 py-2 bg-wa-hover text-wa-text rounded-lg text-sm hover:bg-wa-border transition-colors"
+                  className="flex-1 py-2 bg-lc-hover text-lc-text rounded-lg text-sm hover:bg-lc-border transition-colors"
                 >
                   A+
                 </button>
@@ -218,17 +218,17 @@ export const SettingsPanel: React.FC<Props> = ({ onClose }) => {
           {/* System */}
           {window.electronAPI && (
             <section>
-              <h3 className="text-wa-text-muted text-xs font-medium uppercase tracking-wider mb-3">System</h3>
+              <h3 className="text-lc-text-muted text-xs font-medium uppercase tracking-wider mb-3">System</h3>
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-wa-text text-sm">Autostart</span>
-                  <p className="text-wa-text-muted text-xs">Mit Windows starten</p>
+                  <span className="text-lc-text text-sm">Autostart</span>
+                  <p className="text-lc-text-muted text-xs">Mit Windows starten</p>
                 </div>
                 <button
                   onClick={() => setAutoStart(!autoStart)}
                   className={clsx(
                     'relative w-11 h-6 rounded-full transition-colors',
-                    autoStart ? 'bg-wa-green' : 'bg-wa-border'
+                    autoStart ? 'bg-lc-green' : 'bg-lc-border'
                   )}
                 >
                   <span className={clsx(
@@ -243,12 +243,12 @@ export const SettingsPanel: React.FC<Props> = ({ onClose }) => {
           {/* Updates */}
           {window.electronAPI && (
             <section>
-              <h3 className="text-wa-text-muted text-xs font-medium uppercase tracking-wider mb-3">Updates</h3>
+              <h3 className="text-lc-text-muted text-xs font-medium uppercase tracking-wider mb-3">Updates</h3>
               <div className="space-y-2">
                 <button
                   onClick={handleCheckUpdate}
                   disabled={checkingUpdate}
-                  className="w-full py-2 bg-wa-hover hover:bg-wa-border text-wa-text rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full py-2 bg-lc-hover hover:bg-lc-border text-lc-text rounded-lg text-sm font-medium transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   {checkingUpdate ? (
                     <>
@@ -260,13 +260,13 @@ export const SettingsPanel: React.FC<Props> = ({ onClose }) => {
                     </>
                   ) : 'Nach Updates suchen'}
                 </button>
-                {updateMsg && <p className="text-wa-text-muted text-xs text-center">{updateMsg}</p>}
+                {updateMsg && <p className="text-lc-text-muted text-xs text-center">{updateMsg}</p>}
               </div>
             </section>
           )}
 
           {/* Logout */}
-          <section className="pt-4 border-t border-wa-border">
+          <section className="pt-4 border-t border-lc-border">
             <button
               onClick={handleLogout}
               className="w-full py-2 text-red-400 hover:text-red-300 hover:bg-red-400/10 rounded-lg text-sm font-medium transition-colors"

@@ -118,19 +118,19 @@ function LoginScreen() {
   };
 
   return (
-    <div className="flex items-center justify-center h-full bg-wa-bg-main">
+    <div className="flex items-center justify-center h-full bg-lc-bg-main">
       <div className="w-full max-w-sm p-8">
         <div className="text-center mb-8">
-          <BrandLogo uid="loginLogo" className="w-20 h-20 mx-auto mb-4 rounded-2xl shadow-lg shadow-wa-green/30" />
-          <h1 className="text-2xl font-bold text-wa-text">LetsChat</h1>
-          <p className="text-wa-text-muted text-sm mt-1">Dein sicherer Messenger</p>
+          <BrandLogo uid="loginLogo" className="w-20 h-20 mx-auto mb-4 rounded-2xl shadow-lg shadow-lc-green/30" />
+          <h1 className="text-2xl font-bold text-lc-text">LetsChat</h1>
+          <p className="text-lc-text-muted text-sm mt-1">Dein sicherer Messenger</p>
         </div>
 
-        <div className="flex bg-wa-input-bg rounded-lg p-1 mb-6">
+        <div className="flex bg-lc-input-bg rounded-lg p-1 mb-6">
           <button
             onClick={() => setMode('login')}
             className={`flex-1 py-2 rounded-md text-sm font-medium transition-colors ${
-              mode === 'login' ? 'bg-wa-green text-white' : 'text-wa-text-muted hover:text-wa-text'
+              mode === 'login' ? 'bg-lc-green text-white' : 'text-lc-text-muted hover:text-lc-text'
             }`}
           >
             Anmelden
@@ -138,7 +138,7 @@ function LoginScreen() {
           <button
             onClick={() => setMode('register')}
             className={`flex-1 py-2 rounded-md text-sm font-medium transition-colors ${
-              mode === 'register' ? 'bg-wa-green text-white' : 'text-wa-text-muted hover:text-wa-text'
+              mode === 'register' ? 'bg-lc-green text-white' : 'text-lc-text-muted hover:text-lc-text'
             }`}
           >
             Registrieren
@@ -148,20 +148,20 @@ function LoginScreen() {
         <form onSubmit={handleSubmit} className="space-y-4">
           {mode === 'register' && (
             <div>
-              <label className="text-wa-text-muted text-xs mb-1 block">Anzeigename</label>
+              <label className="text-lc-text-muted text-xs mb-1 block">Anzeigename</label>
               <input
                 type="text"
                 value={displayName}
                 onChange={e => setDisplayName(e.target.value)}
                 placeholder="Dein Name"
                 required
-                className="w-full bg-wa-input-bg text-wa-text px-4 py-3 rounded-lg text-sm outline-none border border-transparent focus:border-wa-green transition-colors"
+                className="w-full bg-lc-input-bg text-lc-text px-4 py-3 rounded-lg text-sm outline-none border border-transparent focus:border-lc-green transition-colors"
               />
             </div>
           )}
 
           <div>
-            <label className="text-wa-text-muted text-xs mb-1 block">Benutzername</label>
+            <label className="text-lc-text-muted text-xs mb-1 block">Benutzername</label>
             <input
               type="text"
               value={username}
@@ -169,12 +169,12 @@ function LoginScreen() {
               placeholder="Benutzername"
               required
               autoComplete="username"
-              className="w-full bg-wa-input-bg text-wa-text px-4 py-3 rounded-lg text-sm outline-none border border-transparent focus:border-wa-green transition-colors"
+              className="w-full bg-lc-input-bg text-lc-text px-4 py-3 rounded-lg text-sm outline-none border border-transparent focus:border-lc-green transition-colors"
             />
           </div>
 
           <div>
-            <label className="text-wa-text-muted text-xs mb-1 block">Passwort</label>
+            <label className="text-lc-text-muted text-xs mb-1 block">Passwort</label>
             <input
               type="password"
               value={password}
@@ -182,7 +182,7 @@ function LoginScreen() {
               placeholder="Passwort"
               required
               autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
-              className="w-full bg-wa-input-bg text-wa-text px-4 py-3 rounded-lg text-sm outline-none border border-transparent focus:border-wa-green transition-colors"
+              className="w-full bg-lc-input-bg text-lc-text px-4 py-3 rounded-lg text-sm outline-none border border-transparent focus:border-lc-green transition-colors"
             />
           </div>
 
@@ -195,7 +195,7 @@ function LoginScreen() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 bg-wa-green hover:bg-wa-green/90 text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-3 bg-lc-green hover:bg-lc-green/90 text-white rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Bitte warten...' : mode === 'login' ? 'Anmelden' : 'Konto erstellen'}
           </button>
@@ -207,15 +207,15 @@ function LoginScreen() {
 
 function WelcomeScreen() {
   return (
-    <div className="flex flex-col items-center justify-center h-full bg-wa-bg-chat">
+    <div className="flex flex-col items-center justify-center h-full bg-lc-bg-chat">
       <div className="text-center space-y-4">
         <BrandLogo uid="welcomeLogo" className="w-24 h-24 mx-auto rounded-2xl" />
-        <h2 className="text-wa-text text-2xl font-light">LetsChat für Windows</h2>
-        <p className="text-wa-text-muted text-sm max-w-xs">
+        <h2 className="text-lc-text text-2xl font-light">LetsChat für Windows</h2>
+        <p className="text-lc-text-muted text-sm max-w-xs">
           Wähle einen Chat aus oder starte eine neue Konversation
         </p>
-        <div className="flex items-center gap-2 text-wa-text-muted text-xs mt-6">
-          <svg className="w-4 h-4 text-wa-green" fill="currentColor" viewBox="0 0 20 20">
+        <div className="flex items-center gap-2 text-lc-text-muted text-xs mt-6">
+          <svg className="w-4 h-4 text-lc-green" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
           </svg>
           Ende-zu-Ende-verschlüsselt
@@ -238,8 +238,8 @@ function TitleBar() {
   if (!window.electronAPI) return null;
 
   return (
-    <div className="flex items-center justify-between h-8 bg-wa-bg-main px-2 select-none" style={{ WebkitAppRegion: 'drag' } as any}>
-      <div className="flex items-center gap-2 text-wa-text-muted text-xs pl-2">
+    <div className="flex items-center justify-between h-8 bg-lc-bg-main px-2 select-none" style={{ WebkitAppRegion: 'drag' } as any}>
+      <div className="flex items-center gap-2 text-lc-text-muted text-xs pl-2">
         <svg width="18" height="18" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" rx="10" fill="url(#tbGrad)"/>
           <path d="M20 8C13.373 8 8 13.149 8 19.5C8 22.07 8.9 24.44 10.41 26.34L8.5 32L14.36 30.12C16.12 31.01 18.01 31.5 20 31.5C26.627 31.5 32 26.351 32 20C32 13.649 26.627 8 20 8Z" fill="white"/>
@@ -253,12 +253,12 @@ function TitleBar() {
             </linearGradient>
           </defs>
         </svg>
-        <span className="text-wa-green font-semibold">LetsChat</span>
+        <span className="text-lc-green font-semibold">LetsChat</span>
       </div>
       <div className="flex items-center" style={{ WebkitAppRegion: 'no-drag' } as any}>
         <button
           onClick={() => window.electronAPI?.minimize()}
-          className="w-10 h-8 flex items-center justify-center text-wa-text-muted hover:text-wa-text hover:bg-white/10 transition-colors"
+          className="w-10 h-8 flex items-center justify-center text-lc-text-muted hover:text-lc-text hover:bg-white/10 transition-colors"
         >
           <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 10 1">
             <rect width="10" height="1" />
@@ -266,7 +266,7 @@ function TitleBar() {
         </button>
         <button
           onClick={handleMaximize}
-          className="w-10 h-8 flex items-center justify-center text-wa-text-muted hover:text-wa-text hover:bg-white/10 transition-colors"
+          className="w-10 h-8 flex items-center justify-center text-lc-text-muted hover:text-lc-text hover:bg-white/10 transition-colors"
         >
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 10 10" strokeWidth="1">
             {maximized ? (
@@ -278,7 +278,7 @@ function TitleBar() {
         </button>
         <button
           onClick={() => window.electronAPI?.close()}
-          className="w-10 h-8 flex items-center justify-center text-wa-text-muted hover:text-white hover:bg-red-600 transition-colors"
+          className="w-10 h-8 flex items-center justify-center text-lc-text-muted hover:text-white hover:bg-red-600 transition-colors"
         >
           <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 10 10">
             <path d="M10 .7L9.3 0 5 4.3.7 0 0 .7 4.3 5 0 9.3l.7.7L5 5.7 9.3 10l.7-.7L5.7 5z" />
@@ -345,7 +345,7 @@ export default function App() {
 
   if (!termsAccepted) {
     return (
-      <div className="flex flex-col h-screen bg-wa-bg-main overflow-hidden">
+      <div className="flex flex-col h-screen bg-lc-bg-main overflow-hidden">
         <TitleBar />
         <TermsOfService onAccept={handleAcceptTerms} onDecline={handleDeclineTerms} />
       </div>
@@ -353,7 +353,7 @@ export default function App() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-wa-bg-main overflow-hidden">
+    <div className="flex flex-col h-screen bg-lc-bg-main overflow-hidden">
       <TitleBar />
       <UpdateNotification />
 

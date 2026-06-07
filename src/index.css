@@ -6,47 +6,47 @@
    Theme palettes. The `wa` Tailwind colors resolve to these CSS variables, so
    toggling the `dark` / `light` class on <html> re-themes the entire app.
    Values are space-separated RGB channels so Tailwind's `/<alpha>` modifiers
-   keep working (e.g. bg-wa-green/90).
+   keep working (e.g. bg-lc-green/90).
    ────────────────────────────────────────────────────────────────────────── */
 :root,
 html.dark {
-  --wa-green: 0 168 132;
-  --wa-green-dark: 0 92 75;
-  --wa-green-light: 37 211 102;
-  --wa-bg-main: 17 27 33;
-  --wa-bg-sidebar: 17 27 33;
-  --wa-bg-chat: 11 20 26;
-  --wa-bubble-in: 32 44 51;
-  --wa-bubble-out: 0 92 75;
-  --wa-text: 233 237 239;
-  --wa-text-muted: 134 150 160;
-  --wa-text-secondary: 102 119 129;
-  --wa-icon: 174 186 193;
-  --wa-border: 42 57 66;
-  --wa-hover: 42 57 66;
-  --wa-input-bg: 42 57 66;
-  --wa-header: 32 44 51;
-  --wa-panel-header: 32 44 51;
+  --lc-green: 0 168 132;
+  --lc-green-dark: 0 92 75;
+  --lc-green-light: 37 211 102;
+  --lc-bg-main: 17 27 33;
+  --lc-bg-sidebar: 17 27 33;
+  --lc-bg-chat: 11 20 26;
+  --lc-bubble-in: 32 44 51;
+  --lc-bubble-out: 0 92 75;
+  --lc-text: 233 237 239;
+  --lc-text-muted: 134 150 160;
+  --lc-text-secondary: 102 119 129;
+  --lc-icon: 174 186 193;
+  --lc-border: 42 57 66;
+  --lc-hover: 42 57 66;
+  --lc-input-bg: 42 57 66;
+  --lc-header: 32 44 51;
+  --lc-panel-header: 32 44 51;
 }
 
 html.light {
-  --wa-green: 0 168 132;
-  --wa-green-dark: 0 92 75;
-  --wa-green-light: 37 211 102;
-  --wa-bg-main: 255 255 255;
-  --wa-bg-sidebar: 255 255 255;
-  --wa-bg-chat: 239 234 226;
-  --wa-bubble-in: 255 255 255;
-  --wa-bubble-out: 217 253 211;
-  --wa-text: 17 27 33;
-  --wa-text-muted: 102 119 129;
-  --wa-text-secondary: 134 150 160;
-  --wa-icon: 84 101 111;
-  --wa-border: 225 230 233;
-  --wa-hover: 240 242 245;
-  --wa-input-bg: 240 242 245;
-  --wa-header: 240 242 245;
-  --wa-panel-header: 240 242 245;
+  --lc-green: 0 168 132;
+  --lc-green-dark: 0 92 75;
+  --lc-green-light: 37 211 102;
+  --lc-bg-main: 255 255 255;
+  --lc-bg-sidebar: 255 255 255;
+  --lc-bg-chat: 239 234 226;
+  --lc-bubble-in: 255 255 255;
+  --lc-bubble-out: 217 253 211;
+  --lc-text: 17 27 33;
+  --lc-text-muted: 102 119 129;
+  --lc-text-secondary: 134 150 160;
+  --lc-icon: 84 101 111;
+  --lc-border: 225 230 233;
+  --lc-hover: 240 242 245;
+  --lc-input-bg: 240 242 245;
+  --lc-header: 240 242 245;
+  --lc-panel-header: 240 242 245;
 }
 
 @layer base {

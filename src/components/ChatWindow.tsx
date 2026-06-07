@@ -249,12 +249,12 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
 
   return (
     <div
-      className="flex flex-col h-full bg-wa-bg-chat"
+      className="flex flex-col h-full bg-lc-bg-chat"
       onDrop={handleDrop}
       onDragOver={e => e.preventDefault()}
     >
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 bg-wa-header border-b border-wa-border">
+      <div className="flex items-center justify-between px-4 py-3 bg-lc-header border-b border-lc-border">
         <div className="flex items-center gap-3">
           <ContactAvatar
             name={chat.contact.displayName}
@@ -264,11 +264,11 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
             showStatus
           />
           <div>
-            <p className="text-wa-text font-medium">{chat.contact.displayName}</p>
+            <p className="text-lc-text font-medium">{chat.contact.displayName}</p>
             <p className={clsx(
               'text-xs transition-colors',
-              chat.contact.online ? 'text-wa-green' :
-              chat.typing ? 'text-wa-green' : 'text-wa-text-muted'
+              chat.contact.online ? 'text-lc-green' :
+              chat.typing ? 'text-lc-green' : 'text-lc-text-muted'
             )}>
               {chat.typing ? 'schreibt...' : lastSeenText}
             </p>
@@ -280,7 +280,7 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
             onClick={() => setShowSearch(v => !v)}
             className={clsx(
               'p-2 rounded-full transition-colors',
-              showSearch ? 'text-wa-green bg-wa-hover' : 'text-wa-icon hover:bg-wa-hover hover:text-wa-text'
+              showSearch ? 'text-lc-green bg-lc-hover' : 'text-lc-icon hover:bg-lc-hover hover:text-lc-text'
             )}
             title="Suchen (Ctrl+F)"
           >
@@ -292,7 +292,7 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
       </div>
 
       {showSearch && (
-        <div className="bg-wa-header border-b border-wa-border">
+        <div className="bg-lc-header border-b border-lc-border">
           <SearchBar
             value={searchQuery}
             onChange={setSearchQuery}
@@ -300,7 +300,7 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
             onClose={() => { setShowSearch(false); setSearchQuery(''); }}
           />
           {searchQuery && (
-            <div className="px-4 py-1 text-xs text-wa-text-muted">
+            <div className="px-4 py-1 text-xs text-lc-text-muted">
               {filteredMessages.length} Ergebnis{filteredMessages.length !== 1 ? 'se' : ''}
             </div>
           )}
@@ -315,7 +315,7 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
         }}
       >
         {isLoadingMore && (
-          <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 bg-wa-header px-3 py-1 rounded-full text-xs text-wa-text-muted">
+          <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10 bg-lc-header px-3 py-1 rounded-full text-xs text-lc-text-muted">
             Lade ältere Nachrichten...
           </div>
         )}
@@ -352,7 +352,7 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
                 >
                   {showDateSep && (
                     <div className="flex items-center justify-center py-2">
-                      <span className="bg-wa-header/80 backdrop-blur-sm text-wa-text-muted text-xs px-3 py-1 rounded-full">
+                      <span className="bg-lc-header/80 backdrop-blur-sm text-lc-text-muted text-xs px-3 py-1 rounded-full">
                         {getDateLabel(message.createdAt)}
                       </span>
                     </div>
@@ -376,16 +376,16 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
 
       {/* Reply preview */}
       {replyTo && (
-        <div className="flex items-center gap-3 px-4 py-2 bg-wa-header border-t border-wa-border">
-          <div className="flex-1 border-l-4 border-wa-green pl-3 min-w-0">
-            <p className="text-wa-green text-xs font-medium">{replyTo.senderName}</p>
-            <p className="text-wa-text-muted text-sm truncate">
+        <div className="flex items-center gap-3 px-4 py-2 bg-lc-header border-t border-lc-border">
+          <div className="flex-1 border-l-4 border-lc-green pl-3 min-w-0">
+            <p className="text-lc-green text-xs font-medium">{replyTo.senderName}</p>
+            <p className="text-lc-text-muted text-sm truncate">
               {replyTo.type !== 'text' ? `📎 ${replyTo.type}` : replyTo.content}
             </p>
           </div>
           <button
             onClick={() => setReplyTo(null)}
-            className="text-wa-text-muted hover:text-wa-text transition-colors"
+            className="text-lc-text-muted hover:text-lc-text transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -395,14 +395,14 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
       )}
 
       {/* Input area */}
-      <div className="px-4 py-3 bg-wa-header border-t border-wa-border">
+      <div className="px-4 py-3 bg-lc-header border-t border-lc-border">
         <div className="flex items-end gap-2">
           <div className="relative">
             <button
               onClick={() => setShowEmoji(v => !v)}
               className={clsx(
                 'p-2 rounded-full transition-colors',
-                showEmoji ? 'text-wa-green' : 'text-wa-icon hover:text-wa-text'
+                showEmoji ? 'text-lc-green' : 'text-lc-icon hover:text-lc-text'
               )}
               title="Emoji"
             >
@@ -421,7 +421,7 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
           <button
             onClick={handleFilePick}
             disabled={uploading}
-            className="p-2 rounded-full text-wa-icon hover:text-wa-text transition-colors disabled:opacity-50"
+            className="p-2 rounded-full text-lc-icon hover:text-lc-text transition-colors disabled:opacity-50"
             title="Datei anhängen"
           >
             {uploading ? (
@@ -443,7 +443,7 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
             onChange={e => { if (e.target.files?.[0]) handleFileUpload(e.target.files[0]); }}
           />
 
-          <div className="flex-1 bg-wa-input-bg rounded-xl px-4 py-2">
+          <div className="flex-1 bg-lc-input-bg rounded-xl px-4 py-2">
             <textarea
               ref={textareaRef}
               value={inputText}
@@ -451,14 +451,14 @@ export const ChatWindow: React.FC<Props> = ({ chat }) => {
               onKeyDown={handleKeyDown}
               placeholder="Nachricht eingeben"
               rows={1}
-              className="w-full bg-transparent text-wa-text placeholder-wa-text-muted text-sm resize-none outline-none min-h-[24px] max-h-[150px]"
+              className="w-full bg-transparent text-lc-text placeholder-lc-text-muted text-sm resize-none outline-none min-h-[24px] max-h-[150px]"
               style={{ height: 'auto' }}
             />
           </div>
 
           <button
             onClick={handleSend}
-            className="p-2 rounded-full bg-wa-green hover:bg-wa-green/90 text-white transition-colors flex-shrink-0"
+            className="p-2 rounded-full bg-lc-green hover:bg-lc-green/90 text-white transition-colors flex-shrink-0"
             title={inputText.trim() ? 'Senden' : 'Sprachnachricht'}
           >
             {inputText.trim() ? (

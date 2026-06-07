@@ -7,25 +7,25 @@ export default {
       colors: {
         // Driven by CSS custom properties (see src/index.css) so the whole app
         // can switch between dark and light themes at runtime. The `<alpha-value>`
-        // placeholder keeps Tailwind opacity modifiers (e.g. bg-wa-green/90) working.
-        wa: {
-          green: 'rgb(var(--wa-green) / <alpha-value>)',
-          'green-dark': 'rgb(var(--wa-green-dark) / <alpha-value>)',
-          'green-light': 'rgb(var(--wa-green-light) / <alpha-value>)',
-          'bg-main': 'rgb(var(--wa-bg-main) / <alpha-value>)',
-          'bg-sidebar': 'rgb(var(--wa-bg-sidebar) / <alpha-value>)',
-          'bg-chat': 'rgb(var(--wa-bg-chat) / <alpha-value>)',
-          'bubble-in': 'rgb(var(--wa-bubble-in) / <alpha-value>)',
-          'bubble-out': 'rgb(var(--wa-bubble-out) / <alpha-value>)',
-          text: 'rgb(var(--wa-text) / <alpha-value>)',
-          'text-muted': 'rgb(var(--wa-text-muted) / <alpha-value>)',
-          'text-secondary': 'rgb(var(--wa-text-secondary) / <alpha-value>)',
-          'icon': 'rgb(var(--wa-icon) / <alpha-value>)',
-          'border': 'rgb(var(--wa-border) / <alpha-value>)',
-          'hover': 'rgb(var(--wa-hover) / <alpha-value>)',
-          'input-bg': 'rgb(var(--wa-input-bg) / <alpha-value>)',
-          'header': 'rgb(var(--wa-header) / <alpha-value>)',
-          'panel-header': 'rgb(var(--wa-panel-header) / <alpha-value>)',
+        // placeholder keeps Tailwind opacity modifiers (e.g. bg-lc-green/90) working.
+        lc: {
+          green: 'rgb(var(--lc-green) / <alpha-value>)',
+          'green-dark': 'rgb(var(--lc-green-dark) / <alpha-value>)',
+          'green-light': 'rgb(var(--lc-green-light) / <alpha-value>)',
+          'bg-main': 'rgb(var(--lc-bg-main) / <alpha-value>)',
+          'bg-sidebar': 'rgb(var(--lc-bg-sidebar) / <alpha-value>)',
+          'bg-chat': 'rgb(var(--lc-bg-chat) / <alpha-value>)',
+          'bubble-in': 'rgb(var(--lc-bubble-in) / <alpha-value>)',
+          'bubble-out': 'rgb(var(--lc-bubble-out) / <alpha-value>)',
+          text: 'rgb(var(--lc-text) / <alpha-value>)',
+          'text-muted': 'rgb(var(--lc-text-muted) / <alpha-value>)',
+          'text-secondary': 'rgb(var(--lc-text-secondary) / <alpha-value>)',
+          'icon': 'rgb(var(--lc-icon) / <alpha-value>)',
+          'border': 'rgb(var(--lc-border) / <alpha-value>)',
+          'hover': 'rgb(var(--lc-hover) / <alpha-value>)',
+          'input-bg': 'rgb(var(--lc-input-bg) / <alpha-value>)',
+          'header': 'rgb(var(--lc-header) / <alpha-value>)',
+          'panel-header': 'rgb(var(--lc-panel-header) / <alpha-value>)',
         },
       },
       fontFamily: {
