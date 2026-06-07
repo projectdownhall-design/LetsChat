@@ -1,0 +1,72 @@
+name: Release
+
+# Trigger on version tags, e.g. `git tag v1.0.0 && git push origin v1.0.0`
+on:
+  push:
+    tags:
+      - "v*"
+
+# Needed so the workflow can create a Release and upload assets.
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build Windows installers
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build renderer (Vite)
+        run: npm run build:vite
+
+      - name: Build Electron main/preload
+        run: npm run build:electron
+
+      - name: Build server
+        run: npm run build:server
+
+      # NSIS + portable targets (see "build" config in package.json).
+      # --publish never: we attach assets ourselves below instead of using
+      # electron-builder's GitHub publisher.
+      - name: Package with electron-builder (NSIS + portable)
+        run: npx electron-builder --win --publish never
+
+      - name: Install Inno Setup
+        run: choco install innosetup -y --no-progress
+
+      # Regenerates the canvas artwork, then compiles installer/setup.iss
+      # (which packages dist-electron/win-unpacked) into dist-installer/.
+      - name: Build Inno Setup installer
+        run: npm run build:installer
+
+      - name: List build artifacts
+        run: |
+          echo "== dist-electron =="; ls -la dist-electron || true
+          echo "== dist-installer =="; ls -la dist-installer || true
+
+      - name: Create GitHub Release and upload installers
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ github.ref_name }}
+          generate_release_notes: true
+          fail_on_unmatched_files: false
+          files: |
+            dist-electron/*.exe
+            dist-electron/*.blockmap
+            dist-electron/latest.yml
+            dist-installer/*.exe
